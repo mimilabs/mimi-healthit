@@ -17,9 +17,17 @@ urls = [
     "https://media.githubusercontent.com/media/onc-healthit/onc-open-data/main/puf/2022/clinician-certified-technology-pi-2022-1.csv",
     "https://media.githubusercontent.com/media/onc-healthit/onc-open-data/main/puf/2022/clinician-certified-technology-pi-2022-2.csv",
     "https://media.githubusercontent.com/media/onc-healthit/onc-open-data/main/puf/2022/clinician-certified-technology-pi-2022-3.csv",
-    "https://media.githubusercontent.com/media/onc-healthit/onc-open-data/main/puf/2022/clinician-certified-technology-pi-2022-4.csv",    
+    "https://media.githubusercontent.com/media/onc-healthit/onc-open-data/main/puf/2022/clinician-certified-technology-pi-2022-4.csv",
+    "https://media.githubusercontent.com/media/ghwein/onc-open-data/refs/heads/main/puf/2023/clinician-certified-technology-pi-2023-1.csv",
+    "https://media.githubusercontent.com/media/ghwein/onc-open-data/refs/heads/main/puf/2023/clinician-certified-technology-pi-2023-2.csv",
+    "https://media.githubusercontent.com/media/ghwein/onc-open-data/refs/heads/main/puf/2023/clinician-certified-technology-pi-2023-3.csv",
+    "https://media.githubusercontent.com/media/ghwein/onc-open-data/refs/heads/main/puf/2023/clinician-certified-technology-pi-2023-4.csv"
 ]
 
 # COMMAND ----------
 
 download_files(urls, "/Volumes/mimi_ws_1/healthit/src/chit_cpip/")
+
+# COMMAND ----------
+
+

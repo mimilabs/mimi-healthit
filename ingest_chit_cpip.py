@@ -15,12 +15,14 @@ for file in files:
     mimi_src_file_date = parse(f"{file.stem[-6:-2]}-12-31").date()
     mimi_src_file_name = file.name
     mimi_dlt_load_date = datetime.today().date()
-    df = spark.createDataFrame((pd.read_csv(file, dtype={'practice_size': int, 
-                                                         'provider_key': str, 
-                                                         'npi': str, 
-                                                         'grp_key': str, 
-                                                         'product_id': str,
-                                                         'edition': str})))
+    pdf = (pd.read_csv(file, dtype={'practice_size': int, 
+                                    'provider_key': str, 
+                                    'npi': str, 
+                                    'grp_key': str, 
+                                    'product_id': str,
+                                    'edition': str}))
+    pdf['provider_key'] = pdf['provider_key'].str.zfill(9)
+    df = spark.createDataFrame(pdf)
     df = (df.withColumn("mimi_src_file_date", f.lit(mimi_src_file_date))
           .withColumn("mimi_src_file_name", f.lit(mimi_src_file_name))
           .withColumn("mimi_dlt_load_date", f.lit(mimi_dlt_load_date)))
