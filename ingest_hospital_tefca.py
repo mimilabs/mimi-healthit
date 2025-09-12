@@ -11,10 +11,6 @@ files = sorted([file for file in Path("/Volumes/mimi_ws_1/healthit/src/hospital_
 
 # COMMAND ----------
 
-pd.read_csv(files[0], dtype=str).display()
-
-# COMMAND ----------
-
 for file in files:
     mimi_src_file_date = parse(f"{file.stem[-7:]}-01").date()
     mimi_src_file_name = file.name
